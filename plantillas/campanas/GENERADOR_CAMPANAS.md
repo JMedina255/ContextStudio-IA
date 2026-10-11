@@ -75,7 +75,7 @@ Para planificar o redactar una campaña publicitaria, solicita a tu asistente:
 ## 4. Estructura Estándar de Anuncio para Redes Sociales (Meta Ads)
 1. **Gancho (Líneas 1-2):** Pregunta provocadora o estadística impactante (visible antes del "Ver más").
 2. **Cuerpo del Mensaje (3-5 párrafos breves):** Desarrollo de beneficios mediante viñetas legibles.
-3. **Prueba Social / Garantía:** Elemento de confianza respaldado por datos oficiales de la marca.
+3. **Respaldo Institucional Verificable:** Dato de confianza oficial y comprobable (ej. años de operación, certificaciones reales o método propio, sin inventar testimonios ni garantías no declaradas).
 4. **Llamado a la Acción (CTA):** Enlace o indicación hacia el canal oficial (ej. WhatsApp).
 5. **Título del Anuncio (Headline corto):** Máximo 5 palabras persuasivas.
 

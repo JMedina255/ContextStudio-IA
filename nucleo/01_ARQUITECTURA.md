@@ -7,7 +7,7 @@
 ContextStudio IA se concibe bajo una arquitectura desacoplada y orientada a la seguridad (Jamstack / Serverless Proxy). El sistema separa estrictamente la capa de presentación e interacción del usuario de la capa de cómputo seguro y conexión con proveedores externos de Inteligencia Artificial.
 
 > [!NOTE]
-> La arquitectura descrita en este documento representa el diseño propuesto y aprobado para la Fase 01. Los detalles de implementación de bajo nivel se refinarán en las fases técnicas correspondientes (Fases 02, 03 y 04) según el [Roadmap](file:///c:/Users/Admin/Desktop/Proyectos/Proyecto%20ContextStudio-IA/docs/ROADMAP.md).
+> La arquitectura descrita en este documento representa el diseño propuesto y aprobado para la Fase 01. Los detalles de implementación de bajo nivel se refinarán en las fases técnicas correspondientes (Fases 02, 03 y 04) según el [Roadmap](../docs/ROADMAP.md).
 
 ---
 

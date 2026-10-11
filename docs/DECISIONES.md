@@ -15,6 +15,9 @@ Este documento recopila las decisiones de arquitectura y diseño técnico adopta
 | [ADR-005](#adr-005-despliegue-del-frontend-en-github-pages) | Despliegue estático del frontend en GitHub Pages | **Confirmada** | 2026-10-11 |
 | [ADR-006](#adr-006-backend-proxy-con-cloudflare-workers-para-claves-api) | Backend Serverless con Cloudflare Workers para protección de claves API | *Propuesta en validación* | 2026-10-11 |
 | [ADR-007](#adr-007-integración-directa-con-github-api-mediante-octokit) | Integración con GitHub REST API (Octokit) para creación de repositorios | *Propuesta en validación* | 2026-10-11 |
+| [ADR-008](#adr-008-paquete-modular-contextstudiocore-aislado-de-fs-y-dom) | Paquete modular `@contextstudio/core` aislado de `fs` y DOM | **Confirmada** | 2026-10-11 |
+| [ADR-009](#adr-009-empaquetado-de-plantillas-en-memoria-y-motor-handlebars) | Empaquetado de plantillas en memoria y motor Handlebars determinista | **Confirmada** | 2026-10-11 |
+| [ADR-010](#adr-010-validación-estricta-con-ajv-draft-2020-12-y-ajv-formats) | Validación estricta con Ajv Draft 2020-12 y `ajv-formats` | **Confirmada** | 2026-10-11 |
 
 ---
 
@@ -82,3 +85,31 @@ Este documento recopila las decisiones de arquitectura y diseño técnico adopta
 - **Decisión:** Evaluar la integración con `@octokit/rest` en la Fase 06 permitiendo al usuario ingresar opcionalmente un Personal Access Token (PAT) con permisos de escritura.
 - **Justificación:** Automatiza el flujo de despliegue de contextos empresariales para equipos técnicos sin requerir pasos manuales de git init / push.
 - **Condición de validación:** Se validará en la Fase 06 garantizando que los tokens del usuario no se persistan indebidamente en ningún servidor.
+
+---
+
+### ADR-008: Paquete Modular `@contextstudio/core` Aislado de `fs` y DOM
+- **Fecha:** 2026-10-11
+- **Estado:** **Confirmada**
+- **Contexto:** El motor de generación documental debe poder ejecutarse tanto en Node.js (scripts de desarrollo/demo) como en el navegador (futura aplicación React en GitHub Pages).
+- **Decisión:** Implementar `@contextstudio/core` como un paquete npm con TypeScript estricto cuyas funciones públicas sean puras en memoria, sin llamadas a `fs`, `path`, `process`, DOM ni APIs exclusivas de Node o navegador.
+- **Justificación:** Garantiza la máxima portabilidad, permite probar la lógica de generación sin I/O y prepara la plataforma para su integración sin adaptadores adicionales en la interfaz React de la Fase 03.
+
+---
+
+### ADR-009: Empaquetado de Plantillas en Memoria y Motor Handlebars
+- **Fecha:** 2026-10-11
+- **Estado:** **Confirmada**
+- **Contexto:** Las plantillas de generación deben ser editables en el repositorio, pero no pueden cargarse mediante `fs.readFileSync` en un entorno de navegador estático.
+- **Decisión:** Mantener las plantillas como archivos `.hbs` en `packages/core/templates/` y generar automáticamente un bundle TypeScript en memoria (`src/templates/bundle.ts`) que las exporta como un mapa tipado de strings procesado con Handlebars (`noEscape: true`).
+- **Justificación:** Combina la legibilidad y mantenibilidad de archivos de plantilla individuales con la portabilidad web en tiempo de ejecución, eliminando dependencias de red o disco.
+
+---
+
+### ADR-010: Validación Estricta con Ajv Draft 2020-12 y `ajv-formats`
+- **Fecha:** 2026-10-11
+- **Estado:** **Confirmada**
+- **Contexto:** Se requiere asegurar que ningún dato inválido, incompleto o malicioso ingrese al motor de generación documental.
+- **Decisión:** Utilizar la implementación oficial de Ajv para JSON Schema Draft 2020-12 (`ajv/dist/2020`) con el complemento `ajv-formats` para validación estricta de emails, URIs y patrones regex (slugs y colores hexadecimales).
+- **Justificación:** Cumple al 100% con el estándar del esquema oficial, genera diagnósticos claros con ruta de campo para el usuario y previene fallos silenciosos o alucinaciones en el motor.
+

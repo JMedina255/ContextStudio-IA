@@ -1,0 +1,426 @@
+/**
+ * ESQUEMA DE DATOS EMBEBIDO EN TYPESCRIPT
+ * Generado automáticamente desde esquemas/negocio.schema.json
+ */
+export const SCHEMA_DATA = {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://contextstudio.ia/schemas/negocio.schema.json",
+  "title": "PerfilNegocio",
+  "description": "Esquema formal de validación para la captura y estructuración de información empresarial en ContextStudio IA.",
+  "type": "object",
+  "required": [
+    "slug",
+    "nombre_comercial",
+    "rubro",
+    "descripcion",
+    "contactos",
+    "modulos_seleccionados"
+  ],
+  "properties": {
+    "slug": {
+      "type": "string",
+      "description": "Identificador único y normalizado para nombres de directorios y rutas.",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "nombre_comercial": {
+      "type": "string",
+      "description": "Nombre oficial de la empresa o marca comercial.",
+      "minLength": 2,
+      "maxLength": 100
+    },
+    "rubro": {
+      "type": "string",
+      "description": "Sector económico o industria principal en la que opera.",
+      "minLength": 2,
+      "maxLength": 100
+    },
+    "descripcion": {
+      "type": "string",
+      "description": "Resumen ejecutivo de la actividad y propuesta de valor de la empresa.",
+      "minLength": 10
+    },
+    "mision": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Declaración de misión corporativa (opcional o null si no está definida)."
+    },
+    "vision": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Declaración de visión corporativa a mediano/largo plazo."
+    },
+    "ubicacion": {
+      "type": "object",
+      "description": "Datos de localización física o indicación de modelo 100% digital.",
+      "properties": {
+        "es_digital": {
+          "type": "boolean",
+          "default": false
+        },
+        "direccion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ciudad": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pais": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "contactos": {
+      "type": "object",
+      "description": "Canales de comunicación directos verificados.",
+      "properties": {
+        "telefono": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "whatsapp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "email": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "email"
+        },
+        "sitio_web": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        }
+      },
+      "additionalProperties": false
+    },
+    "redes_sociales": {
+      "type": "object",
+      "description": "Presencia oficial en plataformas y redes sociales.",
+      "properties": {
+        "instagram": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "facebook": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "linkedin": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tiktok": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "youtube": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "productos": {
+      "type": "array",
+      "description": "Catálogo de productos físicos o digitales ofrecidos.",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "nombre",
+          "descripcion"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "nombre": {
+            "type": "string",
+            "minLength": 2
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "beneficios": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "precio": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "monto": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "moneda": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 3,
+                "maxLength": 3
+              },
+              "detalles": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "servicios": {
+      "type": "array",
+      "description": "Catálogo de servicios profesionales ofrecidos.",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "nombre",
+          "descripcion"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "nombre": {
+            "type": "string",
+            "minLength": 2
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "beneficios": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "modalidad": {
+            "type": "string",
+            "enum": [
+              "presencial",
+              "remoto",
+              "hibrido",
+              "no_especificado"
+            ]
+          },
+          "precio": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "monto": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "moneda": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "minLength": 3,
+                "maxLength": 3
+              },
+              "detalles": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "publico_objetivo": {
+      "type": "object",
+      "description": "Definición del cliente ideal y segmentación.",
+      "properties": {
+        "perfil_demografico": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "perfil_psicografico": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "puntos_dolor": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "motivadores_compra": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "objeciones_comunes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "identidad_visual": {
+      "type": "object",
+      "description": "Directrices de marca, colorimetría y tono de comunicación.",
+      "properties": {
+        "tono_voz": {
+          "type": "string",
+          "description": "Tono comunicacional preponderante (ej. formal, empático, enérgico)."
+        },
+        "personalidad_marca": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "paleta_colores": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "nombre",
+              "hex",
+              "uso"
+            ],
+            "properties": {
+              "nombre": {
+                "type": "string"
+              },
+              "hex": {
+                "type": "string",
+                "pattern": "^#[0-9A-Fa-f]{6}$"
+              },
+              "uso": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "tipografias": {
+          "type": "object",
+          "properties": {
+            "principal": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "secundaria": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "restricciones_esteticas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "objetivos_comerciales": {
+      "type": "object",
+      "description": "Metas de conversión y llamadas a la acción prioritarias.",
+      "properties": {
+        "metas_principales": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "llamadas_a_la_accion_principales": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "modulos_seleccionados": {
+      "type": "array",
+      "description": "Códigos de módulos de ContextStudio IA activados para el negocio.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "MOD-01",
+          "MOD-02",
+          "MOD-03",
+          "MOD-04",
+          "MOD-05",
+          "MOD-06",
+          "MOD-07"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+} as const;
+export default SCHEMA_DATA;

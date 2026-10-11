@@ -71,7 +71,7 @@ Todo guion generado debe presentarse en el siguiente formato técnico estructura
 | **01 (Hook)** | 00 - 03s | Primer plano de [Situación problemática o acción rápida de impacto]. | *"¿Cansado de [problema común]? Esto te interesa."* | "¿Aún con este problema?" (Letras grandes en negrita) |
 | **02** | 03 - 10s | Plano medio mostrando [Detalle o causa del problema]. | *"La mayoría comete el error de [error habitual], pero hay una forma mejor."* | "El error que casi todos cometen ⚠️" |
 | **03** | 10 - 20s | Demostración visual de [Producto/Servicio de {{nombre_negocio}} en acción]. | *"En {{nombre_negocio}} diseñamos [solución], con [beneficio clave 1] y [beneficio clave 2]."* | Beneficio 1 / Beneficio 2 (Iconos de check) |
-| **04** | 20 - 25s | Cliente satisfecho utilizando el servicio o toma del producto final terminado. | *"Resultados reales, sin complicaciones y con respaldo garantizado."* | "Calidad garantizada ⭐⭐⭐⭐⭐" |
+| **04** | 20 - 25s | Toma del producto o servicio terminado en uso real, destacando sus características verificadas. | *"Una propuesta diseñada para resolver [dolor clave del usuario] de forma concreta."* | "[Característica o beneficio oficial]" |
 | **05 (CTA)** | 25 - 30s | Pantalla de cierre con logotipo de {{nombre_negocio}}, colores corporativos y canal de contacto. | *"Escríbenos al enlace de nuestro perfil y comienza hoy mismo."* | "👉 {{contacto_cta}}" / Logotipo |
 ```
 

@@ -8,9 +8,9 @@ Este documento detalla el plan de evolución integral de **ContextStudio IA**, e
 
 | Fase | Nombre | Estado | Enfoque Principal |
 | :---: | :--- | :---: | :--- |
-| **01** | **Repositorio Núcleo y Documentación** | **En curso (Actual)** | Arquitectura, reglas, plantillas base y esquemas de datos. |
-| **02** | **Modelo de Datos y Motor de Generación** | Pendiente | Tipos TypeScript, parser y motor de plantillas determinista. |
-| **03** | **Interfaz React y Experiencia de Usuario** | Pendiente | UI con React, Tailwind CSS, formularios por pasos y previsualizador. |
+| **01** | **Repositorio Núcleo y Documentación** | **Completada** | Arquitectura, reglas, plantillas base y esquemas de datos. |
+| **02** | **Modelo de Datos y Motor de Generación** | **Completada** | Tipos TypeScript, validación Ajv, plantillas Handlebars en memoria, cobertura 95.9%. |
+| **03** | **Interfaz React y Experiencia de Usuario** | Pendiente (Siguiente) | UI con React, Tailwind CSS, formularios por pasos y previsualizador. |
 | **04** | **Backend e Integración Inicial de IA** | Pendiente | Cloudflare Workers, proxy seguro y conexión con OpenAI / Claude / Gemini. |
 | **05** | **Generadores Publicitarios y Audiovisuales** | Pendiente | Implementación de módulos de flyers, campañas, guiones y storyboards. |
 | **06** | **Exportación, Historial e Integración con GitHub**| Pendiente | Empaquetado ZIP, persistencia local y sincronización con GitHub API. |

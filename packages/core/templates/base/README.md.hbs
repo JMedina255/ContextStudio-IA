@@ -1,0 +1,52 @@
+# Proyecto de Contexto Empresarial — {{nombre_negocio}}
+
+> Base de conocimiento e instrucciones maestras estructuradas para herramientas de Inteligencia Artificial (ChatGPT, Claude Projects, Cursor, Copilot y agentes autónomos).
+> Generado con **ContextStudio IA** v{{version_generador}} | Fecha: {{fecha_generacion}}
+
+---
+
+## 1. Visión General del Proyecto
+
+Este repositorio de contexto contiene toda la información oficial, verificada y normalizada de **{{nombre_negocio}}** ({{rubro}}). Ha sido diseñado para alimentar asistentes de inteligencia artificial eliminando alucinaciones de datos y preservando la identidad de marca en todas las respuestas operativas y creativas.
+
+---
+
+## 2. Índice de Documentos de este Proyecto
+
+### Documentación del Núcleo Empresarial (Lectura Obligatoria)
+- [INSTRUCCIONES_CHATGPT.md](INSTRUCCIONES_CHATGPT.md): Directrices maestras de sistema y pautas de configuración para asistentes de IA.
+- [nucleo/00_NEGOCIO.md](nucleo/00_NEGOCIO.md): Perfil institucional, datos de contacto verificados, modelo operativo y público objetivo.
+- [nucleo/01_IDENTIDAD_VISUAL.md](nucleo/01_IDENTIDAD_VISUAL.md): Paleta cromática oficial, tipografías institucionales, tono de voz y personalidad de marca.
+- [nucleo/02_PRODUCTOS_SERVICIOS.md](nucleo/02_PRODUCTOS_SERVICIOS.md): Catálogo completo de ofertas con especificaciones técnicas y precios oficiales.
+- [nucleo/03_REGLAS_GENERALES.md](nucleo/03_REGLAS_GENERALES.md): Políticas éticas, restricciones y mandato estricto de cero alucinación de datos.
+
+{{#if has_generadores}}
+### Módulos Generadores Operativos Activos
+{{#if has_flyers}}
+- [generadores/FLYERS.md](generadores/FLYERS.md): Formulación de briefs técnicos y prompts para piezas gráficas y banners.
+{{/if}}
+{{#if has_campanas}}
+- [generadores/PUBLICACIONES.md](generadores/PUBLICACIONES.md): Creación de publicaciones orgánicas y copys para redes sociales.
+- [generadores/CAMPAÑAS.md](generadores/CAMPAÑAS.md): Estructuración de campañas publicitarias multicanal y marcos de copywriting.
+{{/if}}
+{{#if has_videos}}
+- [generadores/IDEAS_VIDEO.md](generadores/IDEAS_VIDEO.md): Conceptualización de ideas y ángulos narrativos audiovisuales.
+- [generadores/GUIONES_VIDEO.md](generadores/GUIONES_VIDEO.md): Redacción de guiones audiovisuales técnicos escena por escena.
+- [generadores/STORYBOARD.md](generadores/STORYBOARD.md): Desglose cinematográfico de planos y prompts para generadores de video con IA.
+{{/if}}
+{{/if}}
+
+### Recursos y Activos de Marca
+- [recursos/README.md](recursos/README.md): Ubicación sugerida para logotipos vectoriales, manuales de marca o documentos de soporte.
+
+---
+
+## 3. Guía de Uso Rápido con Asistentes de IA
+
+1. **Para Claude Projects o Custom GPTs:**
+   - Carga todos los archivos Markdown de este proyecto como conocimiento (`Knowledge / Project Files`).
+   - Copia el contenido de [INSTRUCCIONES_CHATGPT.md](INSTRUCCIONES_CHATGPT.md) en las instrucciones de sistema (`System Prompt`).
+2. **Para sesiones de chat estándar:**
+   - Adjunta el archivo [nucleo/00_NEGOCIO.md](nucleo/00_NEGOCIO.md) y el generador correspondiente a tu necesidad (ej. `generadores/FLYERS.md`).
+3. **Mantenimiento del contexto:**
+   - Si los teléfonos, precios o servicios de {{nombre_negocio}} cambian, actualiza directamente los archivos en `nucleo/` para mantener sincronizadas a todas las IA del equipo.
