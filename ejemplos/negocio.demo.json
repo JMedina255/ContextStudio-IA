@@ -1,0 +1,169 @@
+{
+  "slug": "kafi-nova-tostaduria",
+  "nombre_comercial": "Kafi Nova Tostaduría",
+  "rubro": "Cafetería de Especialidad y Tueste Artesanal",
+  "descripcion": "Tostaduría de café de especialidad y barra artesanal dedicada a la comercialización de granos de origen ético, tueste fresco bajo demanda y experiencias de catación profesional.",
+  "mision": "Conectar a productores cafetaleros con consumidores apasionados a través de perfiles de tueste minuciosos, sostenibilidad y cultura del buen café.",
+  "vision": "Convertirse en la tostaduría artesanal líder de la región en trazabilidad, innovación sensorial y comercio justo para el año 2030.",
+  "ubicacion": {
+    "es_digital": false,
+    "direccion": "Avenida Primavera 402, Barrio Los Pinos",
+    "ciudad": "Medellín",
+    "pais": "Colombia"
+  },
+  "contactos": {
+    "telefono": "+57 300 987 6543",
+    "whatsapp": "+57 300 987 6543",
+    "email": "hola@kafinova.demo",
+    "sitio_web": "https://www.kafinova.demo"
+  },
+  "redes_sociales": {
+    "instagram": "https://instagram.com/kafinova_cafe",
+    "facebook": null,
+    "linkedin": null,
+    "tiktok": "https://tiktok.com/@kafinova_tueste",
+    "youtube": null
+  },
+  "productos": [
+    {
+      "id": "prod-001",
+      "nombre": "Café Bourbon Rosado (250g)",
+      "descripcion": "Granos seleccionados con proceso honey y notas frutales a durazno y flor de azahar.",
+      "beneficios": [
+        "Tueste reciente menor a 7 días",
+        "Puntaje SCA superior a 86 puntos",
+        "Trazabilidad 100% de finca cooperativa"
+      ],
+      "precio": {
+        "monto": 38000,
+        "moneda": "COP",
+        "detalles": "Bolsa tricapa con válvula desgasificadora"
+      }
+    },
+    {
+      "id": "prod-002",
+      "nombre": "Pack Degustación Orígenes (3 x 100g)",
+      "descripcion": "Trío de cafés con diferentes perfiles de fermentación y tueste para comparar en casa.",
+      "beneficios": [
+        "Ideal para regalos o aprendizaje sensorial",
+        "Incluye guía impresa de molienda y extracción"
+      ],
+      "precio": {
+        "monto": 52000,
+        "moneda": "COP",
+        "detalles": "Caja coleccionable ecológica"
+      }
+    }
+  ],
+  "servicios": [
+    {
+      "id": "serv-001",
+      "nombre": "Taller de Filtrados y Catación Básica",
+      "descripcion": "Sesión práctica presencial de 2 horas sobre métodos V60, Aeropress y Prensa Francesa.",
+      "beneficios": [
+        "Aprende a calibrar tu molienda y agua",
+        "Incluye degustación de 4 orígenes y café para llevar"
+      ],
+      "modalidad": "presencial",
+      "precio": {
+        "monto": 95000,
+        "moneda": "COP",
+        "detalles": "Por persona, cupos limitados a 6 asistentes"
+      }
+    },
+    {
+      "id": "serv-002",
+      "nombre": "Suscripción Corporativa de Café de Especialidad",
+      "descripcion": "Abastecimiento mensual de granos recién tostados para oficinas con calibración de equipos.",
+      "beneficios": [
+        "Aumento en la productividad y bienestar del equipo",
+        "Mantenimiento básico mensual de molino incluido"
+      ],
+      "modalidad": "hibrido",
+      "precio": {
+        "monto": null,
+        "moneda": null,
+        "detalles": "Cotización personalizada según número de colaboradores"
+      }
+    }
+  ],
+  "publico_objetivo": {
+    "perfil_demografico": "Adultos de 24 a 45 años, profesionales independientes, emprendedores y entusiastas de la gastronomía urbana.",
+    "perfil_psicografico": "Valoran la procedencia de los alimentos, prefieren compras conscientes a cadenas masivas, disfrutan de momentos de desconexión y rituales matutinos.",
+    "puntos_dolor": [
+      "Frustración por café comercial amargo y quemado",
+      "Falta de conocimiento técnico para preparar un buen café en casa",
+      "Dificultad para encontrar granos con fecha de tueste verificable"
+    ],
+    "motivadores_compra": [
+      "Búsqueda de sabor complejo y aromático",
+      "Deseo de apoyar al comercio local y agrícola",
+      "Atracción por la estética artesanal y cuidada"
+    ],
+    "objeciones_comunes": [
+      "Consideran que el café de especialidad es demasiado costoso",
+      "Dudas sobre si necesitan máquinas caras para prepararlo"
+    ]
+  },
+  "identidad_visual": {
+    "tono_voz": "Cálido, didáctico, apasionado y artesanal, sin caer en esnobismo.",
+    "personalidad_marca": [
+      "Auténtico",
+      "Cercano",
+      "Sustentable",
+      "Experto y pedagógico"
+    ],
+    "paleta_colores": [
+      {
+        "nombre": "Tierra Espresso",
+        "hex": "#2B1E16",
+        "uso": "Color principal de marca, fondos profundos y tipografía mayor"
+      },
+      {
+        "nombre": "Crema Espuma",
+        "hex": "#F4EFE6",
+        "uso": "Fondo secundario, contraste suave y cajas de texto"
+      },
+      {
+        "nombre": "Cereza Maduro",
+        "hex": "#B83A2A",
+        "uso": "Acento visual para botones, llamados a la acción y promociones"
+      },
+      {
+        "nombre": "Hoja Cafeto",
+        "hex": "#3D5A40",
+        "uso": "Acento secundario en sellos ecológicos y certificaciones"
+      }
+    ],
+    "tipografias": {
+      "principal": "Playfair Display (Titulares refinados)",
+      "secundaria": "Inter (Cuerpos de texto y especificaciones técnicas)"
+    },
+    "restricciones_esteticas": [
+      "No utilizar colores neón o saturaciones artificiales",
+      "Evitar fotografías de bancos de imágenes con tazas genéricas sin grano visible",
+      "Prohibido el uso de tipografías manuscritas ilegibles"
+    ]
+  },
+  "objetivos_comerciales": {
+    "metas_principales": [
+      "Duplicar las ventas de bolsas de café de especialidad para consumo en el hogar",
+      "Llenar las plazas de los talleres de filtrados mensuales",
+      "Captar 10 nuevas empresas para la suscripción corporativa este trimestre"
+    ],
+    "llamadas_a_la_accion_principales": [
+      "Pide tus granos frescos por WhatsApp",
+      "Inscríbete al próximo taller de filtrados",
+      "Cotiza café para tu oficina"
+    ]
+  },
+  "modulos_seleccionados": [
+    "MOD-01",
+    "MOD-02",
+    "MOD-03",
+    "MOD-04",
+    "MOD-05",
+    "MOD-06",
+    "MOD-07"
+  ]
+}
